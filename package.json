@@ -1,0 +1,11 @@
+{
+  "name": "react-data-binding",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "_n0man",
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-env": "1.5.2",
+    "babel-preset-react": "6.24.1"
+  }
+}
