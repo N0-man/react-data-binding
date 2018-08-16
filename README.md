@@ -1,25 +1,53 @@
 # react-data-binding
 
 ### Install
+~~~~
 $ yarn global add live-server  --> install live-server
 $ live-server -v   --> verify version
+~~~~
 
 Now attach your folder having index.html
+~~~~
 $ live-server public
+~~~~
 
 Install Babel
+~~~~
 $ npm install -g babel-cli@6.24.1
 $ babel --help
 $ yarn init   //This creates package.json
+~~~~
 
 Add React and ENV preset
+~~~~
 $ yarn add babel-preset-react@6.24.1 babel-preset-env@1.5.2
+~~~~
 
 Realtime Compile JSX into JS
+~~~~
 $ babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+~~~~
 
 ### Description
-when you render elementCount it is referencing data "count".. When the user clicks on +1 button the count would be incremented but the Count data on the browser <h1>Count: {count}</h1> does not change…????
+when you render elementCount it is displaying data "Count".. When the user clicks on +1 button the count would be incremented but the Count data on the browser <h1>Count: {count}</h1> does not change…????
+~~~~
+let count = 0
+const addOne = () => ++count
+const minusOne = () => --count
+const resetCount = () => count = 0
+
+const elementCount = (
+    <div>
+        <h1>Count: {count}</h1>
+        <button onClick={addOne}>+1</button>
+        <button onClick={minusOne}>-1</button>
+        <button onClick={resetCount}>reset</button>
+    </div>
+);
+
+const appRoot = document.getElementById('app') 
+ReactDOM.render(elementCount, appRoot)
+~~~~
 
 This is because JSX do not have any build in Data Binding
 
