@@ -49,7 +49,7 @@ const appRoot = document.getElementById('app')
 ReactDOM.render(elementCount, appRoot)
 ~~~~
 
-This is because JSX do not have any build in Data Binding
+> This is because JSX do not have any build in Data Binding
 
 elementCount would resolve to an object with count value as 0… 
 ReactDOM.render would then render elementCount with count 0… 
@@ -59,7 +59,9 @@ When the button is clicked the count value changes but then elementCount needs t
 You can extract elementCount and ReactDOM.render into a function and call it everytime you want to re-render
 
 ### Is this HORRIBLE??? 
-Since we are re rendering the app (DOM) so many times…??? Answer is NOOOOOOO
+Since we are re rendering the app (DOM) so many times…??? 
+> Answer is NOOOOOOO...
+
 React uses virtual DOM algorithm to identify minimal changes that needs to be made to render the application…
 
 Go to the the Dev tools -> Elements and click on +1 and -1… 
