@@ -29,7 +29,7 @@ $ babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
 ~~~~
 
 ### Description
-when you render elementCount it is displaying data "Count".. When the user clicks on +1 button the count would be incremented but the Count data on the browser <h1>Count: {count}</h1> does not change…????
+when you render elementCount it is displaying data "Count".. When the user clicks on +1 button the count would be incremented but the Count data on the browser does not change…????
 ~~~~
 let count = 0
 const addOne = () => ++count
