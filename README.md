@@ -1,4 +1,4 @@
-# react-data-binding
+# React jsx-data-binding
 
 ### Install
 ~~~~
